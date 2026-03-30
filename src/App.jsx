@@ -35,7 +35,7 @@ function App() {
 
                         </div>
      {activetab === 'product' ? <DigitalTools productsdata ={productsdata} cart={cart} setcart={setcart}></DigitalTools> : null }
-     {activetab === 'cart' ? <Cart cart={cart}></Cart> : null}
+     {activetab === 'cart' ? <Cart cart={cart} setcart={setcart}></Cart> : null}
      <HowItWorks></HowItWorks>
      <PricingSection></PricingSection>
      <Footer></Footer>
