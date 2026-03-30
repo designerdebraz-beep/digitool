@@ -1,5 +1,6 @@
 import { MessageSquareX } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const Cart = ({ cart,setcart }) => {
     console.log(cart)
@@ -12,6 +13,7 @@ const Cart = ({ cart,setcart }) => {
         const fillterData = cart.filter(d => d.title !== product.title )
         console.log(fillterData)
         setcart(fillterData)
+        toast('item deleted Successfully')
     }
     return (
         <>

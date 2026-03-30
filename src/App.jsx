@@ -31,7 +31,7 @@ function App() {
      <Pricinghead></Pricinghead>
        <div className="tabs tabs-box bg-transparent justify-center">
                             <input type="radio" name="my_tabs_1" className="tab bg-[#7C3AED] text-white rounded-full font-medium text-sm w-40" onClick={()=> setactivetab("product")} aria-label="Product" defaultChecked />
-                            <input type="radio" name="my_tabs_1" className="tab text-gray-500 rounded-full font-medium w-40 " onClick={()=> setactivetab("cart")} aria-label="Cart" />
+                            <input type="radio" name="my_tabs_1" className="tab text-gray-500 rounded-full font-medium w-40 " onClick={()=> setactivetab("cart")} aria-label={`Cart (${cart.length} items)`}  />
 
                         </div>
      {activetab === 'product' ? <DigitalTools productsdata ={productsdata} cart={cart} setcart={setcart}></DigitalTools> : null }

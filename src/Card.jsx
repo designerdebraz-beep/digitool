@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
 import { Check } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const Card = ({ product, idx , cart , setcart}) => {
     const [addtocart, setaddtocart] = useState(true);
     const handlesuscription = () => {
         setaddtocart()
         setcart([...cart,product])
+        toast.success("Item add to Cart")
 
     }
     return (
@@ -39,7 +41,7 @@ const Card = ({ product, idx , cart , setcart}) => {
 
             {/* Button */}
             <button onClick={handlesuscription}
-                className={`w-full py-3 font-semibold rounded-xl transition-all duration-300 text-white 
+                className={`w-full py-3 cursor-pointer font-semibold rounded-xl transition-all duration-300 text-white 
     ${addtocart
                         ? "bg-[#7C3AED] hover:bg-[#6D28D9]" // Color when "Buy Now" (Clicked)
                         : "bg-green-600 hover:bg-green-700"  // Color when "Add to cart" (Default)
