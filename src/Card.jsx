@@ -23,7 +23,7 @@ const Card = ({ product, idx , cart , setcart}) => {
 
             {/* Price */}
             <div className="mb-6">
-                <span className="text-2xl font-bold text-gray-900">{product.price}</span>
+                <span className="text-2xl font-bold text-gray-900">${product.price}</span>
                 <span className="text-gray-400 text-sm">{product.period}</span>
             </div>
 

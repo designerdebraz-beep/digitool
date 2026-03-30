@@ -2,6 +2,7 @@ import { MessageSquareX } from 'lucide-react';
 
 const Cart = ({ cart }) => {
     console.log(cart)
+    const totalPrice = cart.reduce((sum , item )=> sum + item.price, 0)
     return (
         <div className='px-10'>
             <h2 className='text-4xl'>Your cart {cart.length}</h2>
@@ -16,7 +17,7 @@ const Cart = ({ cart }) => {
 
 
                               <div>
-                            {<h3 className="text-xl font-bold text-gray-900 mb-3">{product.price}</h3>}
+                            {<h3 className="text-xl font-bold text-gray-900 mb-3">${product.price}</h3>}
                         </div>
                 
                 <MessageSquareX className='text-red-600'/>
@@ -26,7 +27,7 @@ const Cart = ({ cart }) => {
 
                  <div className='flex items-center justify-between bg-amber-100'>
                     <h2 className='text-3xl font-bold'>Total: </h2>
-                    <span className='text-5xl px-5'>0</span>
+                    <span className='text-5xl px-5'>${totalPrice}</span>
                  </div>
             </div>
             <button className='btn btn-primary w-full mt-2'>Process to checkOut</button>

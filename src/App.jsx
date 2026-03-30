@@ -25,7 +25,7 @@ function App() {
     //  console.log(cart)
   return (
     <>
-     <Navber></Navber>
+     <Navber cart={cart}></Navber>
      <Banner></Banner>
      <StatsSection></StatsSection>
      <Pricinghead></Pricinghead>

@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 import { ShoppingCart } from 'lucide-react';
 
-const Navber = memo(() => {
+const Navber = memo(({cart}) => {
     return (
-<div className='px-11'>
+<div className='px-11 sticky top-0 z-10'>
     <div className="navbar bg-base-100 ">
   <div className="navbar-start">
     <div className="dropdown">
@@ -26,7 +26,7 @@ const Navber = memo(() => {
   </div>
   <div className="navbar-end ">
     <div className='flex items-center justify-center '>
-      <span className='absolute w-6 h-6 top-2 bg-amber-900 text-center rounded-3xl text-white'>0</span>
+      <span className='absolute w-6 h-6 top-2 bg-blue-900 text-center rounded-3xl font-extrabold text-white'>{cart.length}</span>
     <ShoppingCart className='mr-4 cursor-pointer '/>
      
     </div>
