@@ -3,7 +3,7 @@ import { ShoppingCart } from 'lucide-react';
 
 const Navber = memo(({cart}) => {
     return (
-<div className='px-11 sticky top-0 z-10'>
+<div className='px-11 bg-white sticky top-0 z-10'>
     <div className="navbar bg-base-100 ">
   <div className="navbar-start">
     <div className="dropdown">
