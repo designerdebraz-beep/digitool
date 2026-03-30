@@ -8,12 +8,12 @@ import HowItWorks from './HowItWorks'
 import StatsSection from './StatsSection'
 import DigitalTools from './DigitalTools'
 
-// const data = async () => {
-//   const res = await fetch("/data.json");
-//   return res.json();
-// }
+const data = async () => {
+  const res = await fetch("/data.json");
+  return res.json();
+}
 
-// const productsdata = data()
+const productsdata = data();
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
      <Navber></Navber>
      <Banner></Banner>
      <StatsSection></StatsSection>
-     <DigitalTools></DigitalTools>
+     <DigitalTools productsdata ={productsdata}></DigitalTools>
      <HowItWorks></HowItWorks>
      <PricingSection></PricingSection>
      <Footer></Footer>
