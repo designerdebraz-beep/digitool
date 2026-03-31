@@ -7,6 +7,11 @@ const Card = ({ product, idx , cart , setcart}) => {
     const [addtocart, setaddtocart] = useState(true);
     const handlesuscription = () => {
         setaddtocart()
+        const isfound = cart.find(item => item.title === product.title )
+        if(isfound){
+            toast.error('Item already added to Cart')
+            return
+        }
         setcart([...cart,product])
         toast.success("Item add to Cart")
 

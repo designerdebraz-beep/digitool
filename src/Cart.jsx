@@ -46,9 +46,9 @@ const Cart = ({ cart,setcart }) => {
 
                 }
 
-                 <div className='flex items-center justify-between bg-blue-400 px-2.5 py-2.5 text-white rounded-2xl'>
+                 <div className='flex items-center justify-between bg-gray-100 px-2.5 py-2.5 text-black rounded-2xl'>
                     <h2 className='text-3xl font-bold'>Total: </h2>
-                    <span className='text-5xl px-5'>${totalPrice}</span>
+                    <span className='text-5xl px-5 font-bold'>${totalPrice}</span>
                  </div>
             </div>
             <button onClick={handlePayment} className='btn  w-full mt-2 bg-[#7C3AED] font-bold text-xl text-white py-5'>Process to checkOut</button>
