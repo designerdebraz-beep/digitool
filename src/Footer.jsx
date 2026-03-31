@@ -1,4 +1,7 @@
 import { LayoutGrid ,Annoyed,GlobeX} from 'lucide-react';
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { FaSquareXTwitter } from 'react-icons/fa6';
+
 const Footer = () => {
     return (
   
@@ -58,15 +61,15 @@ const Footer = () => {
             <div className="flex gap-3">
               
               <div className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 cursor-pointer">
-                <GlobeX className="w-4 h-4 text-white" />
+                <FaInstagram  url="https://twitter.com"  className="w-4 h-4 text-white" />
               </div>
 
               <div className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 cursor-pointer">
-                <Annoyed className="w-4 h-4 text-white" />
+                <FaFacebookSquare  className="w-4 h-4 text-white" />
               </div>
 
               <div className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 cursor-pointer">
-                <LayoutGrid className="w-4 h-4 text-white" />
+                <FaSquareXTwitter  className="w-4 h-4 text-white" />
               </div>
 
             </div>

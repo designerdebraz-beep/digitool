@@ -17,11 +17,18 @@ const Cart = ({ cart,setcart }) => {
     }
     return (
         <>
-          {cart.length === 0 ? <div className='flex justify-center items-center'>
-            <p className='text-4xl font-bold text-center  my-12'> Your cart is empty </p>
+          {cart.length === 0 ? <div>
+            <h2 className='px-12 font-extrabold ml-16 mt-10 text-3xl'>Your Cart</h2>
+            <div>
+                <div className='flex flex-col justify-center items-center  shadow-2xl mx-20 mt-4 py-12'>
+            
+            <ShoppingCart  size={50} className='mt-5 text-gray-400'></ShoppingCart>
+            <p className='text-4xl font-bold text-center mb-11 shadow-2xl'> Your cart is empty </p>
             
           </div>
-           :  <div className='px-10'>
+            </div>
+          </div>
+           :  <div className='px-16'>
             
             <h2 className='text-4xl py-3 font-bold'>Your cart {cart.length}</h2>
             <div className="">
@@ -29,19 +36,19 @@ const Cart = ({ cart,setcart }) => {
           
 
                 {
-                    cart.map(product => <div key={product.title} className="text-4xl mb-6 flex items-center justify-between gap-2 py-7 rounded-lg px-4 shadow-2xl">
-                        <div className='flex items-center justify-center'>
+                    cart.map(product => <div key={product.title} className="text-4xl mb-6 flex  items-center justify-between gap-2 py-7 rounded-lg px-10 shadow-2xl ">
+                        <div className='flex flex-col items-start justify-center'>
                             <h2>{product.icon}</h2>
                         <h3 className="text-xl font-bold text-gray-900 mb-3">{product.title}</h3>
-                      
+                        <div>
+                            {<h3 className="text-[30px] font-medium text-gray-500 mb-3">${product.price}</h3>}
+                        </div>
                         </div>
 
                         
-                              <div>
-                            {<h3 className="text-xl font-bold text-gray-900 mb-3">${product.price}</h3>}
-                        </div>
+                            
+                <button type="button" className='text-2xl font-bold text-red-600 cursor-pointer' onClick={()=> handleDelete(product)}>Remove</button>
                 
-                <MessageSquareX onClick={()=> handleDelete(product)} className='text-red-600 cursor-pointer'/>
                     </div>)
 
                 }

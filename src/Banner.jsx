@@ -5,13 +5,13 @@ import { CircleDot } from 'lucide-react';
 
 const Banner = () => {
     return (
-        <div className='flex justify-between items-center gap-3 px-16'>
+        <div className='md:flex justify-between items-center gap-3 px-16'>
             <div className='space-y-7'>
                 <div className='flex bg-[#4f39f618] rounded-full w-70'>
                      <CircleDot className='text-[#9514fa] text-xs' />
                          <p className=' text-left px-2 text-[#9514fa]'> New: AI-Powered Tools Available</p>
                 </div>
-                <h2 className='text-7xl font-extrabold text-[#161f34]'>Supercharge Your <br />Digital Workflow</h2>
+                <h2 className='md:text-7xl font-extrabold text-[#161f34]'>Supercharge Your <br />Digital Workflow</h2>
               
                 <p className='text-[#627382] '>Access premium AI tools, design assets, templates, and productivity <br />
 
@@ -24,7 +24,7 @@ Explore Products
                 </div>
             </div>
             <div>
-                <img className='max-w-96  h-8/12' src={banner} alt=""  />
+                <img className='max-w-96 shadow h-8/12' src={banner} alt=""  />
             </div>
         </div>
     );

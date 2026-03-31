@@ -1,0 +1,18 @@
+Project Name: DigiTools - Premium Digital Marketplace
+
+Project Description: DigiTools is a sleek, high-performance digital products marketplace designed for creators, professionals, and businesses. It features a curated collection of premium assets, AI-powered writing tools, and design kits, all delivered through a seamless user interface.
+
+Key Features:
+Smart Cart Management
+Responsive Product Discovery
+Modern Interactive UI
+The project is built using modern web technologies to ensure speed and maintainability.
+
+Technology We Use
+React.js,
+Tailwind CSS,
+Lucide React,
+*DaisyUI,
+Netlify
+
+

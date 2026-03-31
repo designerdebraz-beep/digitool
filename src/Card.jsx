@@ -52,7 +52,7 @@ const Card = ({ product, idx , cart , setcart}) => {
                         : "bg-green-600 hover:bg-green-700"  // Color when "Add to cart" (Default)
                     }`}
             >
-                {addtocart ? " Buy Now" : "Add to cart"}
+                {addtocart ? " Buy Now" : " ✅Add to cart"}
             </button>
         </div>
     );

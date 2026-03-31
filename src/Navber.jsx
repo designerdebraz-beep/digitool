@@ -3,7 +3,7 @@ import { ShoppingCart } from 'lucide-react';
 
 const Navber = memo(({cart}) => {
     return (
-<div className='px-11 bg-white sticky top-0 z-10'>
+<div className='px-11 bg-white sticky top-0 z-10 shadow-2xl'>
     <div className="navbar bg-base-100 ">
   <div className="navbar-start">
     <div className="dropdown">
@@ -26,11 +26,14 @@ const Navber = memo(({cart}) => {
   </div>
   <div className="navbar-end ">
     <div className='flex items-center justify-center '>
-      <span className='absolute w-6 h-6 top-2 bg-blue-900 text-center rounded-3xl font-extrabold text-white'>{cart.length}</span>
+      {cart.length > 0 ? <span className='absolute w-6 h-6 top-2 bg-red-900 text-center rounded-3xl font-extrabold text-white'>{cart.length}</span> : null
+
+      }
+      
     <ShoppingCart className='mr-4 cursor-pointer '/>
      
     </div>
-    <a className="pr-4 ">Login</a>
+    <a className="pr-4 cursor-pointer">Login</a>
     <a className="text-white  from-blue-500 bg-linear-to-r via-blue-600 to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-full text-sm px-4 py-2.5 text-center leading-5 cursor-pointer">Getstarted</a>
 
   </div>
